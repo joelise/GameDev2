@@ -35,7 +35,8 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
         return SDL_APP_FAILURE;
     }
 
-    pointerDemo->DoDemo();
+   pointerDemo->DoDemo();
+    
 
     return SDL_APP_CONTINUE;  /* carry on with the program! */
 }

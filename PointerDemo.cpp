@@ -2,17 +2,17 @@
 
 using namespace std;
 
-
 void PointerDemo::DoDemo() 
-{
-	cout << "Demo Working";
+{ 
+	cout << "Demo Working" << endl;
 	int age = 3;
-	cName = "Molly";
-	
+	//string cName;
+	string cName = "Molly";
+	PassByValueDemo(cName);
 }
-void PointerDemo::PassByValueDemo() 
+void PointerDemo::PassByValueDemo(string cName) 
 {
-
+	cout << "My name is" << cName << endl;
 }
 void PointerDemo::PassByRefDemo() 
 {

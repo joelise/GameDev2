@@ -4,11 +4,9 @@
 class PointerDemo
 {
 	public:
-		int age;
-		string cName;
+		//string cName;
 		void DoDemo();
-	private:
-		void PassByValueDemo();	//nothing
+		void PassByValueDemo(string cName);	//nothing
 		void PassByRefDemo();	//&
 		void UsePointersDemo();	//
 		void MemLeakDemo();
