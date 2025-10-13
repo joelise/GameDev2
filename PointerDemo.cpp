@@ -2,21 +2,28 @@
 
 using namespace std;
 
+
+
 void PointerDemo::DoDemo() 
 { 
 	cout << "Demo Working" << endl;
 	int age = 3;
-	//string cName;
-	string cName = "Molly";
-	PassByValueDemo(cName);
+	//string cName = "Molly";
+	PassByValueDemo(age);
+	cout << "I am " << age << endl;
+	PassByRefDemo(age);
+	cout << "I am " << age << endl;
 }
-void PointerDemo::PassByValueDemo(string cName) 
+void PointerDemo::PassByValueDemo(int age) 
 {
-	cout << "My name is" << cName << endl;
+	cout << "Enter age ";
+	cin >> age;
+	
 }
-void PointerDemo::PassByRefDemo() 
+void PointerDemo::PassByRefDemo(int& age) 
 {
-
+	cout << "Enter age ";
+	cin >> age;
 }
 void PointerDemo::UsePointersDemo() 
 {
