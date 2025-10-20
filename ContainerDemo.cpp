@@ -82,5 +82,10 @@ void ContainerDemo::ListDemo()
 
 void ContainerDemo::MapDemo()
 {
+	std::map <std::string, std::string, int, std::string> kpopIdols = { {"Stray Kids", "Bangchan", 28, "Leader"},{"Stray Kids", "Felix", 25, "Dancer"},
+		{"Stray Kids", "Seungmin", 25, "Vocal"}, {"Stray Kids", "I.N", 24, "Maknae"}, {"BTS", "RM", 31, "Leader"}, {"BTS", "Suga", 32, "Rapper"}, {"BTS", "Jungkook", 28, "Maknae"},
+		{"Ateez", "Mingi", 26, "Rapper"}, {"EXO", "Baekhyun", 33, "Vocals"}, {"BTS", "J-Hope", 31, "Dancer"} };
+
+
 
 }
