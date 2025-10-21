@@ -82,11 +82,62 @@ void ContainerDemo::ListDemo()
 
 void ContainerDemo::IdolMap()
 {
-	idols["Bangchan"] = Idols("Stray Kids", "Bangchan", 28, "Leader");
+	std::map<std::string, GroupInfo> kpopGroups;
+	kpopGroups.insert({ "Stray Kids", { "8", "Bangchan", "2018", "God's Menu" } });
+	kpopGroups.insert({ "BTS", { "7", "RM", "2013", "Dynamite" } });
+	kpopGroups.insert({ "Enhypen", { "7", "Jungwon", "2020", "Bite Me" } });
+	kpopGroups.insert({ "TOMORROW X TOGETHER", { "5", "Soobin", "2019", "0X1=LOVESONG" } });
+	kpopGroups.insert({ "ATEEZ", { "8", "Hongjoong", "2018", "BOUNCY" } });
+	kpopGroups.insert({ "Seventeen", { "13", "S.Coups", "2015", "Super" } });
+
+	std::string groupName;
+	std::string userChoice;
+	/*std::string searchGroup;
+	auto it = kpopGroups.find(searchGroup);
+	if (it != kpopGroups.end()) {
+		std::cout << "Group: " << searchGroup << "\n";
+		std::cout << "Number of Members: " << it->second.numberOfMembers << "\n";
+	}*/
+
+	std::cout << "Map Demo \n\n\n\n";
+	MapDemoIntro();
+
+	std::getline(std::cin, groupName);
+	auto it = kpopGroups.find(groupName);
+
+	if (it == kpopGroups.end()) 
+	{
+		std::cout << "Group Not Found.\n\n";
+		MapDemoIntro();
+	}
+	else 
+	{
+		std::cout << "You have selected" << groupName << "\n";
+
+		std::cout << "Group: " << groupName << "\n";
+		std::cout << "Number of Members: " << it->second.numberOfMembers << "\n";
+		std::cout << "Leader : " << it->second.leader << "\n";
+		std::cout << "Year of Debut " << it->second.debutYear << "\n";
+		std::cout << "Most Streamed Song: " << it->second.topSong << "\n\n";
+	}
+
+	std::cout << "Would you like to learn about other groups?/n Enter 'Yes' to be brought back to the start page\nEnter 'No' to exit the demo";
+	std::getline(std::cin, userChoice);
+	if (userChoice == "Yes") 
+	{
+		MapDemoIntro();
+	}
+
+}
+
+void ContainerDemo::MapDemoIntro()
+{
+	std::cout << "Here are the current most popular male Kpop groups:\n\n - Stray Kids\n - BTS\n - Enhypen\n - TOMORROW X TOGETHER\n - ATEEZ\n - Seventeen\n\n";
+	std::cout << "Enter the group name to learn more...\n";
 }
 
 void ContainerDemo::MapDemo()
 {
 	
-	
+
 }

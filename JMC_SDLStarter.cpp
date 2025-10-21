@@ -39,7 +39,8 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
 
   // pointerDemo->DoDemo();
     //containerDemo->ArrayDemo();
-    containerDemo->ListDemo();
+    //containerDemo->ListDemo();
+    containerDemo->IdolMap();
   
 
     

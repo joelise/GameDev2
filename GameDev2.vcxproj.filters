@@ -33,7 +33,7 @@
     <ClCompile Include="Fire.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Idols.cpp">
+    <ClCompile Include="KpopGroups.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,7 +53,7 @@
     <ClInclude Include="Fire.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Idols.h">
+    <ClInclude Include="KpopGroups.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

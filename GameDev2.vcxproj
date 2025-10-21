@@ -134,7 +134,7 @@
   <ItemGroup>
     <ClCompile Include="ContainerDemo.cpp" />
     <ClCompile Include="Fire.cpp" />
-    <ClCompile Include="Idols.cpp" />
+    <ClCompile Include="KpopGroups.cpp" />
     <ClCompile Include="JMC_SDLStarter.cpp" />
     <ClCompile Include="PointerDemo.cpp" />
     <ClCompile Include="PolyDemo.cpp" />
@@ -143,7 +143,7 @@
   <ItemGroup>
     <ClInclude Include="ContainerDemo.h" />
     <ClInclude Include="Fire.h" />
-    <ClInclude Include="Idols.h" />
+    <ClInclude Include="KpopGroups.h" />
     <ClInclude Include="PointerDemo.h" />
     <ClInclude Include="PolyDemo.h" />
     <ClInclude Include="Spells.h" />
