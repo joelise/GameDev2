@@ -3,15 +3,129 @@
 
 void ContainerDemo::ArrayDemo()
 {
-	std::string cars[2][4] = {
+	std::cout << "||| ARRAY DEMO ||| \n\n\n";
+	
+	bool playerChoosing{ true };
+	std::string ticTacToe[3][3]
+	{
+		{"X", " ", "X"},
+		{"O", "O", " " },
+		{"X", " ", "O" } };
+	
+	for (int i = 0; i < 3; i++) 
+	{
+		for (int j = 0; j < 3; j++) 
+		{
+			std::cout << ticTacToe[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
+
+	std::cout << "Choose a number\n";
+	ticTacToe[0][1] = "[1]";
+	ticTacToe[1][2] = "[2]";
+	ticTacToe[2][1] = "[3]";
+
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 3; j++)
+		{
+			std::cout << ticTacToe[i][j] << " ";
+		}
+		std::cout << std::endl;
+	}
+
+	while (playerChoosing) 
+	{
+		std::string playerChoice;
+		std::getline(std::cin, playerChoice);
+
+		if (playerChoice == "1")
+		{
+			ticTacToe[0][1] = "X";
+			ticTacToe[1][2] = " ";
+			ticTacToe[2][1] = " ";
+			for (int i = 0; i < 3; i++)
+			{
+				for (int j = 0; j < 3; j++)
+				{
+					std::cout << ticTacToe[i][j] << " ";
+				}
+				std::cout << std::endl;
+			}
+			playerChoosing = false;
+			break;
+		}
+
+		if (playerChoice == "2")
+		{
+			ticTacToe[0][1] = " ";
+			ticTacToe[1][2] = "X";
+			ticTacToe[2][1] = " ";
+			for (int i = 0; i < 3; i++)
+			{
+				for (int j = 0; j < 3; j++)
+				{
+					std::cout << ticTacToe[i][j] << " ";
+				}
+				std::cout << std::endl;
+			}
+			playerChoosing = false;
+			break;
+		}
+
+		if (playerChoice == "3")
+		{
+			ticTacToe[0][1] = " ";
+			ticTacToe[1][2] = " ";
+			ticTacToe[2][1] = "X";
+			for (int i = 0; i < 3; i++)
+			{
+				for (int j = 0; j < 3; j++)
+				{
+					std::cout << ticTacToe[i][j] << " ";
+				}
+				std::cout << std::endl;
+			}
+			playerChoosing = false;
+			break;
+		}
+
+		if (playerChoice != "1" || "2" || "3"){
+			std::cout << "Please select one of the avaliable options\n";
+			ticTacToe[0][1] = "[1]";
+			ticTacToe[1][2] = "[2]";
+			ticTacToe[2][1] = "[3]";
+
+			for (int i = 0; i < 3; i++)
+			{
+				for (int j = 0; j < 3; j++)
+				{
+					std::cout << ticTacToe[i][j] << " ";
+				}
+				std::cout << std::endl;
+			}
+		}
+
+	}
+	
+	 
+
+
+	//std::cout << std::endl;
+
+	/*std::string cars[2][4] = {
 		{"Datsun", "BMW", "Holden", "Ford" },
 		{ "1200", "XM", "Commodore", "Falcon" } };
 	
-	std::cout << cars[0][3] << " " << cars[1][3];
+	std::cout << cars[0][3] << " " << cars[1][3];*/
+
+	std::cout << "\n\n === END OF ARRAY DEMO === ";
 }
 
 void ContainerDemo::ListDemo()
 {
+	std::cout << "||| LIST DEMO ||| \n\n\n";
 	std::cout << "Press Enter to start... \n";
 	std::cin.get();
 
@@ -77,7 +191,8 @@ void ContainerDemo::ListDemo()
 		std::cout << mon;
 	}
 
-	std::cout << "Now it's perfect :) \n";
+	std::cout << "Now it's perfect :) \n\n";
+	std::cout << " === END OF LIST DEMO === ";
 }
 
 
@@ -157,8 +272,9 @@ void ContainerDemo::MapDemo()
 		// If the user wants to exit
 		if (userChoice != "yes")
 		{
-			std::cout << "\nExiting Map Demo...";
+			std::cout << "\nExiting Map Demo...\n\n";
 			isRunning = false;	// Ends the demo loop
+			std::cout << " === END OF MAP DEMO === ";
 		}
 	}
 
