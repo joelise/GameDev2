@@ -4,10 +4,12 @@
 #include <map>
 #include <list>
 #include <iterator>>
-#include <vector>
+#include <cctype>
 
 class ContainerDemo
 {
+	
+
 	struct GroupInfo
 	{
 		std::string numberOfMembers;
@@ -23,10 +25,7 @@ public:
 	
 	void ArrayDemo();
 	void ListDemo();
-	void IdolMap();
-	void MapDemoIntro();
 	void MapDemo();
 	
-
 };
 

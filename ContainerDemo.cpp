@@ -80,9 +80,12 @@ void ContainerDemo::ListDemo()
 	std::cout << "Now it's perfect :) \n";
 }
 
-void ContainerDemo::IdolMap()
+
+void ContainerDemo::MapDemo()
 {
+	// Creates an empty map requiring a group name and their corresponding struct (defined in the header)
 	std::map<std::string, GroupInfo> kpopGroups;
+	// Inserts groups to the map "Group Name (Key)", {"number of members, leader, debut year, top streamed song (Values)"}
 	kpopGroups.insert({ "Stray Kids", { "8", "Bangchan", "2018", "God's Menu" } });
 	kpopGroups.insert({ "BTS", { "7", "RM", "2013", "Dynamite" } });
 	kpopGroups.insert({ "Enhypen", { "7", "Jungwon", "2020", "Bite Me" } });
@@ -90,54 +93,73 @@ void ContainerDemo::IdolMap()
 	kpopGroups.insert({ "ATEEZ", { "8", "Hongjoong", "2018", "BOUNCY" } });
 	kpopGroups.insert({ "Seventeen", { "13", "S.Coups", "2015", "Super" } });
 
-	std::string groupName;
-	std::string userChoice;
-	/*std::string searchGroup;
-	auto it = kpopGroups.find(searchGroup);
-	if (it != kpopGroups.end()) {
-		std::cout << "Group: " << searchGroup << "\n";
-		std::cout << "Number of Members: " << it->second.numberOfMembers << "\n";
-	}*/
+	std::string groupName;			// Variable for the group entered by the user
+	std::string userChoice;			// Variable for if the user wants to exit at the end of the demo loop
 
-	std::cout << "Map Demo \n\n\n\n";
-	MapDemoIntro();
+	std::cout << "||| MAP DEMO ||| \n";
 
-	std::getline(std::cin, groupName);
-	auto it = kpopGroups.find(groupName);
+	bool isRunning = true;	// Condition for menu cycle 
 
-	if (it == kpopGroups.end()) 
+	while (isRunning)		// Menu loop (selecting groups, finds selected information, repeat or exit)
 	{
-		std::cout << "Group Not Found.\n\n";
-		MapDemoIntro();
+		std::cout << "\n\nHere are the current most popular male Kpop groups:\n\n";
+
+		// Loops through each Key in the map and displays
+		for (const auto& group : kpopGroups)	// const = variables can't be modified  auto& = a reference of the variable type which is automatically found by the complier
+		{
+			std::cout << "- " << group.first << std::endl;		// Displays the group name on each line ( group.first = the map keys)
+		}
+
+		bool validChoice = false;	// Condition for the inner loop (if the user has entered a valid group name)
+
+		// Loops until the user enters a valid group name (keeps asking to enter a group if not valid)
+		while (!validChoice)
+		{
+			std::cout << "\nEnter a group name to learn more...\n";
+			std::getline(std::cin, groupName);				// Reads what the user has entered
+			for (auto& c : groupName) c = tolower(c);		// A reference of each character entered by the user, then converted to lowercase
+
+			// Loop cycle to find a match between the group name entered and the map keys
+			for (auto& group : kpopGroups)
+			{
+				std::string key = group.first;			// Creates a variable for the map keys so they can be converted to lowercase
+				for (auto& c : key) c = tolower(c);		// A reference of each character of the map keys, converted into lowercase
+
+				// Strings are case-sensitive, converting variables to both be lowercase ensures capitalisation doesn't affect result
+
+				// Checks if the entered name matches any keys in the map, if there is a match display selected group information
+				if (groupName == key)
+				{
+					std::cout << "\nYou have selected " << group.first << "\n\n";	// Shows user choice before displaying group information
+
+					std::cout << "Group Name: " << group.first << "\n";							// Map Key (Group Name)
+					std::cout << "Number of Members: " << group.second.numberOfMembers << "\n";	// Key Value (Variable of Group Info Struct (Number of Members)
+					std::cout << "Leader: " << group.second.leader << "\n";						// Key Value (Variable of Group Info Struct (Leader)
+					std::cout << "Year of Debut: " << group.second.debutYear << "\n";			// Key Value (Variable of Group Info Struct (Year of Debut)
+					std::cout << "Most Streamed Song: " << group.second.topSong << "\n\n";		// Key Value (Variable of Group Info Struct (Top Song)
+
+					validChoice = true;		// A valid option was selected breaking the loop
+					break;
+				}
+			}
+		}
+		// Displays error message if user enters an invalid option
+		if (!validChoice)
+		{
+			std::cout << "\n Group not found. Please try again\n";
+		}
+
+		// Asks user if they would like to choose another group or exit
+		std::cout << "\nWould you like to learn about other groups?\n\nEnter 'Yes' to be brought back to the start\nOr\nPress Enter to exit the demo\n";
+		std::getline(std::cin, userChoice);			// Reads user input
+		for (auto& c : userChoice) c = tolower(c);	// A reference of each character entered by the user, then converted to lowercase
+
+		// If the user wants to exit
+		if (userChoice != "yes")
+		{
+			std::cout << "\nExiting Map Demo...";
+			isRunning = false;	// Ends the demo loop
+		}
 	}
-	else 
-	{
-		std::cout << "You have selected" << groupName << "\n";
-
-		std::cout << "Group: " << groupName << "\n";
-		std::cout << "Number of Members: " << it->second.numberOfMembers << "\n";
-		std::cout << "Leader : " << it->second.leader << "\n";
-		std::cout << "Year of Debut " << it->second.debutYear << "\n";
-		std::cout << "Most Streamed Song: " << it->second.topSong << "\n\n";
-	}
-
-	std::cout << "Would you like to learn about other groups?/n Enter 'Yes' to be brought back to the start page\nEnter 'No' to exit the demo";
-	std::getline(std::cin, userChoice);
-	if (userChoice == "Yes") 
-	{
-		MapDemoIntro();
-	}
-
-}
-
-void ContainerDemo::MapDemoIntro()
-{
-	std::cout << "Here are the current most popular male Kpop groups:\n\n - Stray Kids\n - BTS\n - Enhypen\n - TOMORROW X TOGETHER\n - ATEEZ\n - Seventeen\n\n";
-	std::cout << "Enter the group name to learn more...\n";
-}
-
-void ContainerDemo::MapDemo()
-{
-	
 
 }
