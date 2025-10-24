@@ -3,7 +3,7 @@
 class Fire :
     public Spells
 {
-public:
-    virtual void CastSpell();
+
+
 };
 

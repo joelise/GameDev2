@@ -8,8 +8,6 @@
 
 class ContainerDemo
 {
-	
-
 	struct GroupInfo
 	{
 		std::string numberOfMembers;
@@ -18,9 +16,7 @@ class ContainerDemo
 		std::string topSong;
 
 	};
-private:
-	
-	
+
 public:
 	
 	void ArrayDemo();

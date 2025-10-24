@@ -5,122 +5,143 @@ void ContainerDemo::ArrayDemo()
 {
 	std::cout << "||| ARRAY DEMO ||| \n\n\n";
 	
-	bool playerChoosing{ true };
-	std::string ticTacToe[3][3]
-	{
-		{"X", " ", "X"},
-		{"O", "O", " " },
-		{"X", " ", "O" } };
+	bool playerChoosing{ true };	// Variable for while loop
 	
-	for (int i = 0; i < 3; i++) 
+	std::string ticTacToe[3][3]		// Creates 2d array of a tictactoe game
 	{
-		for (int j = 0; j < 3; j++) 
+		{" X ", "   ", " X "},
+		{" O ", " O ", "   "},
+		{" X ", "   ", " O "} };
+
+	std::cout << "You are playing as 'X' in a game of TicTacToe, What is your next move?\n\n";
+	
+	// Displays array
+	for (int i = 0; i < 3; i++)			// Row cycle	
+	{
+		for (int j = 0; j < 3; j++)		// Column cycle
 		{
 			std::cout << ticTacToe[i][j] << " ";
 		}
 		std::cout << std::endl;
 	}
 
-	std::cout << "Choose a number\n";
+	std::cout << "\nEnter the number of where you would like to place an 'X'\n\n";
+	// Updates array so possible options are visual numbers
 	ticTacToe[0][1] = "[1]";
 	ticTacToe[1][2] = "[2]";
 	ticTacToe[2][1] = "[3]";
 
-	for (int i = 0; i < 3; i++)
+	// Displays array
+	for (int i = 0; i < 3; i++)			// Row cycle
 	{
-		for (int j = 0; j < 3; j++)
+		for (int j = 0; j < 3; j++)		// Column cycle
 		{
 			std::cout << ticTacToe[i][j] << " ";
 		}
 		std::cout << std::endl;
 	}
 
+	std::cout << std::endl;
+
+	// While the player is making a choice (loops if an invalid choice is chosen)
 	while (playerChoosing) 
 	{
 		std::string playerChoice;
-		std::getline(std::cin, playerChoice);
+		std::getline(std::cin, playerChoice);	// Reads player input
+		std::cout << std::endl;
 
-		if (playerChoice == "1")
+		if (playerChoice == "1")				// If player chose "1"
 		{
-			ticTacToe[0][1] = "X";
-			ticTacToe[1][2] = " ";
-			ticTacToe[2][1] = " ";
-			for (int i = 0; i < 3; i++)
+			std::cout << "You placed an 'X' in middle at the top creating 3 in a row.\n\n";
+
+			// Updates board with player choice
+			ticTacToe[0][1] = " X ";
+			ticTacToe[1][2] = "   ";
+			ticTacToe[2][1] = "   ";
+
+			// Displays array
+			for (int i = 0; i < 3; i++)			// Row cycle
 			{
-				for (int j = 0; j < 3; j++)
+				for (int j = 0; j < 3; j++)		// Column cycle
 				{
 					std::cout << ticTacToe[i][j] << " ";
 				}
 				std::cout << std::endl;
 			}
+
+			std::cout << "\nCongratulations you Win!";
 			playerChoosing = false;
-			break;
+			break;	// Exits while loop
 		}
 
-		if (playerChoice == "2")
+		if (playerChoice == "2")			// If player chose "2"
 		{
-			ticTacToe[0][1] = " ";
-			ticTacToe[1][2] = "X";
-			ticTacToe[2][1] = " ";
-			for (int i = 0; i < 3; i++)
+			std::cout << "You placed an 'X' right of the middle blocking 'O'.\n\n";
+
+			// Updates board with player choice and the opponents move
+			ticTacToe[0][1] = " O ";
+			ticTacToe[1][2] = " X ";
+			ticTacToe[2][1] = "   ";
+
+			// Displays array
+			for (int i = 0; i < 3; i++)			// Row cycle
 			{
-				for (int j = 0; j < 3; j++)
+				for (int j = 0; j < 3; j++)		// Column cycle
 				{
 					std::cout << ticTacToe[i][j] << " ";
 				}
 				std::cout << std::endl;
 			}
+
+			std::cout << "\nAn 'O' was placed in the middle at the top blocking the chance to win.\nIt's a draw.\n";
 			playerChoosing = false;
-			break;
+			break;	// Exits while loop
 		}
 
-		if (playerChoice == "3")
+		if (playerChoice == "3")			// If player chose "3"
 		{
-			ticTacToe[0][1] = " ";
-			ticTacToe[1][2] = " ";
-			ticTacToe[2][1] = "X";
-			for (int i = 0; i < 3; i++)
+			std::cout << "You placed an 'X' in the middle of the bottom row.\n\n";
+
+			// Updates board with player choice and the opponents move
+			ticTacToe[0][1] = "   ";
+			ticTacToe[1][2] = " O ";
+			ticTacToe[2][1] = " X ";
+
+			// Displays array
+			for (int i = 0; i < 3; i++)			// Row cycle
 			{
-				for (int j = 0; j < 3; j++)
+				for (int j = 0; j < 3; j++)		// Column cycle
 				{
 					std::cout << ticTacToe[i][j] << " ";
 				}
 				std::cout << std::endl;
 			}
+
+			std::cout << "\nAn 'O' was placed on the right of the middle row creating 3 O's in a row.\nYou lose.\n";
 			playerChoosing = false;
-			break;
+			break;	// Exits while loop
 		}
 
+		// If a player enters an invalid option
 		if (playerChoice != "1" || "2" || "3"){
-			std::cout << "Please select one of the avaliable options\n";
+			std::cout << "Please select one of the avaliable options.\n\n";
 			ticTacToe[0][1] = "[1]";
 			ticTacToe[1][2] = "[2]";
 			ticTacToe[2][1] = "[3]";
 
-			for (int i = 0; i < 3; i++)
+			// Displays array
+			for (int i = 0; i < 3; i++)			// Row cycle
 			{
-				for (int j = 0; j < 3; j++)
+				for (int j = 0; j < 3; j++)		// Column cycle
 				{
 					std::cout << ticTacToe[i][j] << " ";
 				}
 				std::cout << std::endl;
 			}
 		}
-
 	}
-	
-	 
 
-
-	//std::cout << std::endl;
-
-	/*std::string cars[2][4] = {
-		{"Datsun", "BMW", "Holden", "Ford" },
-		{ "1200", "XM", "Commodore", "Falcon" } };
-	
-	std::cout << cars[0][3] << " " << cars[1][3];*/
-
-	std::cout << "\n\n === END OF ARRAY DEMO === ";
+	std::cout << "\n\n === END OF ARRAY DEMO === \n\n\n\n";
 }
 
 void ContainerDemo::ListDemo()

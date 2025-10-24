@@ -5,6 +5,7 @@
 #include <iostream>
 #include "PointerDemo.h"
 #include "ContainerDemo.h"
+#include "PolyDemo.h"
 
 using namespace std;
 
@@ -19,6 +20,7 @@ static SDL_Texture* texture = NULL;
 static const char* ProjectName = "JMC Starter Project";
 static PointerDemo* pointerDemo;
 static ContainerDemo* containerDemo;
+static PolyDemo* polyDemo;
 
 
 
@@ -38,10 +40,11 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char* argv[])
     }
 
   // pointerDemo->DoDemo();
-    containerDemo->ArrayDemo();
-    containerDemo->ListDemo();
-    cout << endl << endl << endl;
-    containerDemo->MapDemo();
+    //containerDemo->ArrayDemo();
+    //containerDemo->ListDemo();
+    //cout << endl << endl << endl;
+    //containerDemo->MapDemo();
+    polyDemo->DoDemo();
   
 
     

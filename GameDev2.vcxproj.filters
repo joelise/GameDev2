@@ -30,10 +30,16 @@
     <ClCompile Include="Spells.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Fire.cpp">
+    <ClCompile Include="KpopGroups.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="KpopGroups.cpp">
+    <ClCompile Include="FireSpell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="IceSpell.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LightningSpell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,10 +56,16 @@
     <ClInclude Include="Spells.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Fire.h">
+    <ClInclude Include="KpopGroups.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KpopGroups.h">
+    <ClInclude Include="FireSpell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IceSpell.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LightningSpell.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
