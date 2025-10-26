@@ -135,7 +135,6 @@
     <ClCompile Include="ContainerDemo.cpp" />
     <ClCompile Include="FireSpell.cpp" />
     <ClCompile Include="IceSpell.cpp" />
-    <ClCompile Include="KpopGroups.cpp" />
     <ClCompile Include="JMC_SDLStarter.cpp" />
     <ClCompile Include="LightningSpell.cpp" />
     <ClCompile Include="PointerDemo.cpp" />
@@ -146,7 +145,6 @@
     <ClInclude Include="ContainerDemo.h" />
     <ClInclude Include="FireSpell.h" />
     <ClInclude Include="IceSpell.h" />
-    <ClInclude Include="KpopGroups.h" />
     <ClInclude Include="LightningSpell.h" />
     <ClInclude Include="PointerDemo.h" />
     <ClInclude Include="PolyDemo.h" />

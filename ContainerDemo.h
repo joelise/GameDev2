@@ -8,7 +8,7 @@
 
 class ContainerDemo
 {
-	struct GroupInfo
+	struct GroupInfo	// Group of variables for GroupInfo
 	{
 		std::string numberOfMembers;
 		std::string leader;

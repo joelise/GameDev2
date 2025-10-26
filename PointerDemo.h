@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <limits>
 class PointerDemo
 {
 	public:
@@ -9,7 +10,7 @@ class PointerDemo
 		void DoDemo();
 		void PassByValueDemo(int age);	//nothing
 		void PassByRefDemo(int& age);	//&
-		void UsePointersDemo();	//
-		void MemLeakDemo();
+		void UsePointersDemo(int* agePtr);	//
+		void MemLeakDemo(int* newAgePtr);
 };
 

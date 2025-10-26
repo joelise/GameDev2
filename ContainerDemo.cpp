@@ -16,11 +16,11 @@ void ContainerDemo::ArrayDemo()
 	std::cout << "You are playing as 'X' in a game of TicTacToe, What is your next move?\n\n";
 	
 	// Displays array
-	for (int i = 0; i < 3; i++)			// Row cycle	
+	for (int i = 0; i < 3; i++)			// Iterates through each row in the array
 	{
-		for (int j = 0; j < 3; j++)		// Column cycle
+		for (int j = 0; j < 3; j++)		// Iterates through each column in row
 		{
-			std::cout << ticTacToe[i][j] << " ";
+			std::cout << ticTacToe[i][j] << " ";	// Displays output
 		}
 		std::cout << std::endl;
 	}
@@ -32,11 +32,11 @@ void ContainerDemo::ArrayDemo()
 	ticTacToe[2][1] = "[3]";
 
 	// Displays array
-	for (int i = 0; i < 3; i++)			// Row cycle
+	for (int i = 0; i < 3; i++)			// Iterates through each row in the array
 	{
-		for (int j = 0; j < 3; j++)		// Column cycle
+		for (int j = 0; j < 3; j++)		// Iterates through each column in row
 		{
-			std::cout << ticTacToe[i][j] << " ";
+			std::cout << ticTacToe[i][j] << " ";	// Displays output
 		}
 		std::cout << std::endl;
 	}
@@ -60,11 +60,11 @@ void ContainerDemo::ArrayDemo()
 			ticTacToe[2][1] = "   ";
 
 			// Displays array
-			for (int i = 0; i < 3; i++)			// Row cycle
+			for (int i = 0; i < 3; i++)			// Iterates through each row in the array
 			{
-				for (int j = 0; j < 3; j++)		// Column cycle
+				for (int j = 0; j < 3; j++)		// Iterates through each column in row
 				{
-					std::cout << ticTacToe[i][j] << " ";
+					std::cout << ticTacToe[i][j] << " ";	// Displays output
 				}
 				std::cout << std::endl;
 			}
@@ -84,11 +84,11 @@ void ContainerDemo::ArrayDemo()
 			ticTacToe[2][1] = "   ";
 
 			// Displays array
-			for (int i = 0; i < 3; i++)			// Row cycle
+			for (int i = 0; i < 3; i++)			// Iterates through each row in the array
 			{
-				for (int j = 0; j < 3; j++)		// Column cycle
+				for (int j = 0; j < 3; j++)		// Iterates through each column in row
 				{
-					std::cout << ticTacToe[i][j] << " ";
+					std::cout << ticTacToe[i][j] << " ";	// Displays output
 				}
 				std::cout << std::endl;
 			}
@@ -108,11 +108,11 @@ void ContainerDemo::ArrayDemo()
 			ticTacToe[2][1] = " X ";
 
 			// Displays array
-			for (int i = 0; i < 3; i++)			// Row cycle
+			for (int i = 0; i < 3; i++)			// Iterates through each row in the array
 			{
-				for (int j = 0; j < 3; j++)		// Column cycle
+				for (int j = 0; j < 3; j++)		// Iterates through each column in row
 				{
-					std::cout << ticTacToe[i][j] << " ";
+					std::cout << ticTacToe[i][j] << " ";	// Displays output
 				}
 				std::cout << std::endl;
 			}
@@ -130,11 +130,11 @@ void ContainerDemo::ArrayDemo()
 			ticTacToe[2][1] = "[3]";
 
 			// Displays array
-			for (int i = 0; i < 3; i++)			// Row cycle
+			for (int i = 0; i < 3; i++)			// Iterates through each row in the array
 			{
-				for (int j = 0; j < 3; j++)		// Column cycle
+				for (int j = 0; j < 3; j++)		// Iterates through each column in row 
 				{
-					std::cout << ticTacToe[i][j] << " ";
+					std::cout << ticTacToe[i][j] << " ";	// Displays output
 				}
 				std::cout << std::endl;
 			}
@@ -148,27 +148,28 @@ void ContainerDemo::ListDemo()
 {
 	std::cout << "||| LIST DEMO ||| \n\n\n";
 	std::cout << "Press Enter to start... \n";
-	std::cin.get();
+	std::cin.get();			// Gets input
 
 	std::cout << "Starting\n.\n.\n.\n\n";
 
 	std::cout << "What are the months of the year?... \n\n";
-	std::cin.get();
+	std::cin.get();			// Gets input
 	
 	// Creates the list
 	std::list<std::string> months = { "February, ", "March, ", "April, ", "May, ", "June, ", "June, ", "August, ", "September, ", "October, ", "November, "};
 
+	// Prints every string in the list
 	for (std::string mon : months) 
 	{
 		std::cout << mon;
 	}
 
 	std::cout << std::endl << "Hmmm that's not quite right...\n\n";
-	std::cin.get();
+	std::cin.get();		// Gets input
 
-	// Adds "January to the front of the list
-	months.push_front("January, ");
+	months.push_front("January, ");		// Adds "January" to the front of the list
 
+	// Prints every string in the list
 	for (std::string mon : months)
 	{
 		std::cout << mon;
@@ -176,37 +177,39 @@ void ContainerDemo::ListDemo()
 	std::cout << std::endl;
 	
 	std::cout << "January was added but something is still missing...\n\n";
-	std::cin.get();
+	std::cin.get();		// Gets input
 
-	// Adds "December to the end of the list
-	months.push_back("December. \n");
+	months.push_back("December. \n");	// Adds "December to the end of the list
 
+	// Prints every string in the list
 	for (std::string mon : months)
 	{
 		std::cout << mon;
 	}
 
 	std::cout << "Okay we have December, wait where is July? ...\n\n";
-	std::cin.get();
+	std::cin.get();		// Gets input
 
 	// Adds "July" into its correct place in the list
 	std::list<std::string>::iterator it = months.begin();	// Creates an iterator at the start of the list	
 	std::advance(it, 7);									// Moves it to the 7th item in the list
 	months.insert(it, "July, ");							// Inserts "July" in front of the 7th item (in between "June" and "August")
 
+	// Prints every string in list
 	for (std::string mon : months)
 	{
 		std::cout << mon;
 	}
 
 	std::cout << "Why are there 13 months? Oh! there are two Junes...\n\n";
-	std::cin.get();
+	std::cin.get();		// Gets input
 
 	// Removes "June" from the list
 	it = months.begin();				// Moves the iterator back to the start of the list
 	std::advance(it, 6);				// Moves it to the 6th item ("June")
 	months.erase(it);					// Erases the 6th item
 
+	// Prints every string in list
 	for (std::string mon : months)
 	{
 		std::cout << mon;

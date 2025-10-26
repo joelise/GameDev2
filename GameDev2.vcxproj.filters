@@ -30,9 +30,6 @@
     <ClCompile Include="Spells.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="KpopGroups.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="FireSpell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -54,9 +51,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Spells.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="KpopGroups.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FireSpell.h">
