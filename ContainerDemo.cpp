@@ -3,6 +3,7 @@
 
 void ContainerDemo::ArrayDemo()
 {
+	std::cout << "=== START OF WEEK 3 CONTAINER DEMO ===\n\n";
 	std::cout << "||| ARRAY DEMO ||| \n\n\n";
 	
 	bool playerChoosing{ true };	// Variable for while loop
@@ -141,7 +142,7 @@ void ContainerDemo::ArrayDemo()
 		}
 	}
 
-	std::cout << "\n\n === END OF ARRAY DEMO === \n\n\n\n";
+	std::cout << "\n\n||| END OF ARRAY DEMO ||| \n\n\n\n";
 }
 
 void ContainerDemo::ListDemo()
@@ -159,7 +160,7 @@ void ContainerDemo::ListDemo()
 	std::list<std::string> months = { "February, ", "March, ", "April, ", "May, ", "June, ", "June, ", "August, ", "September, ", "October, ", "November, "};
 
 	// Prints every string in the list
-	for (std::string mon : months) 
+	for (std::string mon : months)		// For each month in months
 	{
 		std::cout << mon;
 	}
@@ -170,7 +171,7 @@ void ContainerDemo::ListDemo()
 	months.push_front("January, ");		// Adds "January" to the front of the list
 
 	// Prints every string in the list
-	for (std::string mon : months)
+	for (std::string mon : months)		// For each month in months
 	{
 		std::cout << mon;
 	}
@@ -182,7 +183,7 @@ void ContainerDemo::ListDemo()
 	months.push_back("December. \n");	// Adds "December to the end of the list
 
 	// Prints every string in the list
-	for (std::string mon : months)
+	for (std::string mon : months)		// For each month in months
 	{
 		std::cout << mon;
 	}
@@ -196,7 +197,7 @@ void ContainerDemo::ListDemo()
 	months.insert(it, "July, ");							// Inserts "July" in front of the 7th item (in between "June" and "August")
 
 	// Prints every string in list
-	for (std::string mon : months)
+	for (std::string mon : months)		// For each month in months
 	{
 		std::cout << mon;
 	}
@@ -210,13 +211,13 @@ void ContainerDemo::ListDemo()
 	months.erase(it);					// Erases the 6th item
 
 	// Prints every string in list
-	for (std::string mon : months)
+	for (std::string mon : months)		// For each month in months
 	{
 		std::cout << mon;
 	}
 
 	std::cout << "Now it's perfect :) \n\n";
-	std::cout << " === END OF LIST DEMO === ";
+	std::cout << "||| END OF LIST DEMO ||| ";
 }
 
 
@@ -298,7 +299,8 @@ void ContainerDemo::MapDemo()
 		{
 			std::cout << "\nExiting Map Demo...\n\n";
 			isRunning = false;	// Ends the demo loop
-			std::cout << " === END OF MAP DEMO === ";
+			std::cout << "||| END OF MAP DEMO |||\n\n\n";
+			std::cout << "=== END OF WEEK 3 CONTAINER DEMO ===\n\n\n\n";
 		}
 	}
 

@@ -7,7 +7,7 @@ void Spells::CastSpell()
 
 void Spells::Dispel()
 {
-	
+	std::cout << "The spell was dispelled.";
 }
 
 

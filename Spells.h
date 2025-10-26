@@ -7,6 +7,6 @@ class Spells
 public:
 	virtual void CastSpell();
 	virtual void Dispel();
-	virtual ~Spells() {}
+	virtual ~Spells() {} // virtual destructor to automatically cleanup memory and prevent leaks
 };
 

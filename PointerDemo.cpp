@@ -6,6 +6,8 @@ void PointerDemo::DoDemo()
 	int* agePtr = &age;				// Pointer to the refernce of the age int	
 	int* newAgePtr = new int(age);	// Pointer creating a new address of age int
 	
+	std::cout << "=== START OF WEEK 2 POINTER DEMO ===\n\n";
+
 	// Pass by Value Demo
 	std::cout << "||| PASS BY VALUE DEMO ||| \n\n";
 
@@ -14,7 +16,7 @@ void PointerDemo::DoDemo()
 	PassByValueDemo(age);
 
 	std::cout << "\n\nYour new age is " << age << std::endl << std::endl;		// Prints age (not changed due to pass by value)
-	std::cout << "\n\n === END OF PASS BY VALUE DEMO === \n\n\n\n";
+	std::cout << "||| END OF PASS BY VALUE DEMO ||| \n\n\n\n";
 
 	// Pass by Reference Demo
 	std::cout << "||| PASS BY REF DEMO ||| \n\n";
@@ -24,7 +26,7 @@ void PointerDemo::DoDemo()
 	PassByRefDemo(age);
 
 	std::cout << "\n\nYour new age is " << age << std::endl << std::endl;		// Prints new age (changed from the accessing the variable in pass by ref)
-	std::cout << "\n\n === END OF PASS BY REF DEMO === \n\n\n\n";
+	std::cout << "||| END OF PASS BY REF DEMO ||| \n\n\n\n";
 
 	// Pointer Demo
 	std::cout << "||| POINTER DEMO ||| \n\n";
@@ -34,7 +36,7 @@ void PointerDemo::DoDemo()
 	UsePointersDemo(agePtr);
 
 	std::cout << "\n\nYour new age is " << age << std::endl << std::endl;		// Prints new age (changes from the pointer demo)
-	std::cout << "\n\n === END OF POINTER DEMO === \n\n\n\n";
+	std::cout << "||| END OF POINTER DEMO ||| \n\n\n\n";
 
 	// Mem Leak Demo
 	std::cout << "||| MEM LEAK DEMO ||| \n\n";
@@ -57,8 +59,8 @@ void PointerDemo::DoDemo()
 	newAgePtr = nullptr;	
 	std::cout << "Code Cleaned\n\n";
 
-	std::cout << "\n\n === END OF POINTER DEMO === \n\n\n\n";
-	
+	std::cout << "||| END OF MEM LEAK DEMO ||| \n\n\n\n";
+	std::cout << "=== END OF WEEK 2 POINTER DEMO === \n\n\n\n";
 }
 void PointerDemo::PassByValueDemo(int age) 
 {

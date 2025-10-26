@@ -5,12 +5,10 @@
 class PointerDemo
 {
 	public:
-		//int age;
-		int height;
 		void DoDemo();
-		void PassByValueDemo(int age);	//nothing
-		void PassByRefDemo(int& age);	//&
-		void UsePointersDemo(int* agePtr);	//
+		void PassByValueDemo(int age);	
+		void PassByRefDemo(int& age);	
+		void UsePointersDemo(int* agePtr);	
 		void MemLeakDemo(int* newAgePtr);
 };
 

@@ -16,8 +16,9 @@ void PolyDemo::DoDemo()
 	int enemyHealth = 3;					// Enemy health variable for menu loop
 	int choice = 0;							// Player choice variable
 
+	std::cout << "=== START OF WEEK 4 POLY DEMO ===\n\n";
 	std::cout << "||| POLY DEMO ||| \n\n\n";
-	std::cout << "While exiting a cave you encouter one last enemy.\n\n";
+	std::cout << "While exiting a cave you encounter one last enemy.\n\n";
 
 	// Menu loop
 	while (enemyHealth >0)	// While enemy's health is above 0 loop 
@@ -46,6 +47,7 @@ void PolyDemo::DoDemo()
 	}
 
 	std::cout << "\nThe enemy was defeated. You exit the cave quickly.\n";
-	std::cout << "\n\n === END OF POLY DEMO === \n\n\n\n";
+	std::cout << "\n\n||| END OF POLY DEMO ||| \n\n\n";
+	std::cout << "=== END OF WEEK 4 POLY DEMO ===\n\n\n\n";
 	
 }
